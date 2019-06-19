@@ -1,3 +1,4 @@
+library 'myDeliveryPipeline'
 myDeliveryPipeline {
     branch = 'master'
     scmUrl = 'https://github.com/ashwinmohanakrishnan/Devops-301.git'
