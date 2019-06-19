@@ -35,23 +35,7 @@ pipeline {
             }
         }
 
-        stage('deploy development'){
-            steps {
-                deploy(developmentServer, serverPort)
-            }
-        }
-
-        stage('deploy staging'){
-            steps {
-                deploy(stagingServer, serverPort)
-            }
-        }
-
-        stage('deploy production'){
-            steps {
-                deploy(productionServer, serverPort)
-            }
-        }
+       
     }
     post {
         failure {
