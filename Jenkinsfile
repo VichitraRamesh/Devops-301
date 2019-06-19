@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         branch = 'master'
-        scmUrl = 'ssh://git@myScmServer.com/repos/myRepo.git'
+        scmUrl = 'https://github.com/ashwinmohanakrishnan/Devops-301.git'
         serverPort = '8080'
         developmentServer = 'dev-myproject.mycompany.com'
         stagingServer = 'staging-myproject.mycompany.com'
@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('checkout git') {
             steps {
-                git branch: branch, credentialsId: 'GitCredentials', url: scmUrl
+                git branch: branch, credentialsId: 'git', url: scmUrl
             }
         }
 
