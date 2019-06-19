@@ -8,6 +8,10 @@ pipeline {
         stagingServer = 'staging-myproject.mycompany.com'
         productionServer = 'production-myproject.mycompany.com'
     }
+    
+    tools {
+    maven 'maven'
+  }
     stages {
         stage('checkout git') {
             steps {
@@ -17,8 +21,8 @@ pipeline {
 
         stage('build') {
             steps {
-                def mvnHome = tool name: 'maven', type: 'maven'
-                sh 'mvnHome clean package -DskipTests=true'
+                
+                sh 'mvn clean package -DskipTests=true'
             }
         }
 
