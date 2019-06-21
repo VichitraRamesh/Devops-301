@@ -16,8 +16,8 @@ services:
    container_name: some-mysql
    image: mysql/mysql-server:5.7
    environment:
-    MYSQL_DATABASE: test
-    MYSQL_ROOT_PASSWORD: hellokoding
+    MYSQL_DATABASE: employee
+    MYSQL_ROOT_PASSWORD: password
     MYSQL_ROOT_HOST: '%'
    ports:
    - "3306:3306"
